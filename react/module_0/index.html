@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- react ui change algorithm -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <!-- using react library it changes actual web pages -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- babel library converts your jsx into js -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <!-- jsx -->
+    <div id="root">
+    </div>
+    <script type="text/babel">
+    
+    function Myh1(){
+        return(
+        <h1>Hello</h1>
+        )
+    }
+    function Myh2(){
+        return(
+        <h1>Hello there</h1>
+        )
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Myh1/>)
+    root.render(<Myh1/>)
+    // last render would run
+    root.render(<Myh2/>)
+    
+    </script>
+    
+</body>
+
+</html>

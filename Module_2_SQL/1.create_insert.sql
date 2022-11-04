@@ -1,0 +1,30 @@
+-- create table query---
+CREATE TABLE emp(
+    ID INTEGER AUTO_INCREMENT UNIQUE,
+    NAME VARCHAR(255) NOT NULL,
+    PHNO BIGINT UNIQUE,
+    SALARY FLOAT NOT NULL CHECK (SALARY>2500),
+    DEP VARCHAR(255),
+    AGE INTEGER DEFAULT 25,
+    GENDER ENUM("M","F","TG") 
+);
+
+--INSERT column values
+INSERT INTO emp(NAME,SALARY,GENDER)
+VALUES("JASBIR",5000,"M");
+-- if you want to insert to all the entries
+INSERT INTO emp VALUES(3,"anuj",1234432,5000,"Tech","M");
+
+--------------------------------------------------------------\
+CREATE TABLE employee(
+	EMPCODE INT (4),
+    EMPFNAME VARCHAR(40) NOT NULL,
+    EMPLNAME VARCHAR(40) ,
+    JOB VARCHAR(50) NOT NULL,
+    MANAGERCODE CHAR(4),
+    HIREDATE DATE NOT NULL,
+    SALARY INT(10) NOT NULL,
+    COMISSION INT(10),
+    DEPTCODE INT(3) NOT NULL
+);
+

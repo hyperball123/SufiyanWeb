@@ -1,0 +1,2 @@
+REACT IS A JS LIBRARY USED FOR BUILDING INTERFACES DEVELOPED BY META
+code -> react algo (also known as diffing algorithm ) -> at first dom will be created and after that any changes made in particular part of code the a virtual dom will be creatd and reload will happen only for the part where u made changes

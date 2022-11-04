@@ -1,0 +1,41 @@
+Candidate key that is used to UNIQUELY identify an entry is known as primary key
+for eg - id,phone no,roll no
+
+--------------------------------------
+-- CUSTOMER TABLE --  |      --ORDER TABLE --
+NAME                  |     PHNO:
+PHNO.                 |     OID - PRIMARY KEY
+CID:-(ORIMARY KEY)    |     CID - FOREIGN KEY  
+
+
+-- CID INSIDE ORDER TABLE IS A FORRIGN KEY
+Foreign key - It is an attribute that is a primary key inside another table
+
+---------------------------------------------------------------------------------
+CREATE TABLE CUSTOMER(
+    CID INTEGER NOT NULL UNIQUE,
+    PHNO INTEGER NOT NULL UNIQUE,
+    NAME VARCHAR(255) NOT NULL,
+    PRIMARY KEY(CID)
+)
+
+
+-- WITHOUT PARENT YOU CANNOT HAVE CHILD
+-- IF YOU HAVE A FOREGN KEY THEN YOU CANNOT UPDATE OR DELETE CORRESPONDING PARENT ENTRY
+--  CREATE TABLE ORDERS(
+-- 	   OID INTEGER NOT NULL UNIQUE,
+--     PNAME VARCHAR(255) NOT NULL,
+--     CID INTEGER ,
+--     FOREIGN KEY(CID) REFERENCES  customer(CID)
+-- )
+
+-- DROP TABLE ORDERS;
+-- JAB BHI PARENT TABLE ME SE AAPKA KOI BHI ENTRY REMOVE HONGI TO USKE ASSOCIATED DATA CHILDREN SE BHI HO JAYYE
+-- AND SAME FOR UPDATE 
+-- DROP TABLE ORDERS(
+CREATE TABLE ORDERS(
+    OID INTEGER NOT NULL UNIQUE,
+        PNAME VARCHAR(255) NOT NULL,
+        CID INTEGER ,
+    FOREIGN KEY(CID) REFERENCES CUST(CID) ON UPDATE CASCADE ON DELETE CASCADE
+)

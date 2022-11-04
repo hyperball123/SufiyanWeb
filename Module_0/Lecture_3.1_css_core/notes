@@ -1,0 +1,35 @@
+We can style an element in three ways by 
+INLINE STYLING - ON ELEMENT OF ANY TYPE
+INTERNAL STYLING - IS DONE BY CREATING STYLE TAG IN HEAD 
+EXTERNAL STYLING - BY CREATING NEW CSS FILE AND LINKNG IT TO INDEX.HTML
+................................................................................
+BOX MODEL - IS USED ON EVERY HTML ELEMENTS.
+PADDING - TO ADD EXTRA AREA (FOR or AROUND) THE CONTENT.
+BORDER - AFTER PADDING YOU CAN CREATE BORDER FOR YOUR CONTENT(there are differnt types of border)
+MARGIN - FOR CREATING SPACE BETWEEN 2 ELEMENTS FOR Eg - DIV1 AND DIV2
+..............................................................................................
+HEIGHT N OVER FLOW
+overflow css google.
+
+if there is'nt any content.  (HEIGHT = EMPTY)
+if there is content .(HEIGHT = CONTENT SIZE)
+if the height IS DEFINED while styling and the CONTENT Size is LARGER than defined height. 
+    *(CONTENT will OVERFLOW)* 
+    SOLUTION FOR OVERFLOW - overflow : visible,hidden 
+                            overflow : scroll //for scrollbar on both end
+                            overflow : auto //for vertical scroll bar
+....................................................................................
+UNITS-->
+
+PX - ABSOLUTE
+
+VH - VIEW HEIGHT, VW - VIEW HEIGHT - 
+These are known as relative units -  
+these are dynamic they change height and width acording to browser size
+WITH RESPECT TO BROWSER WIDTH AND HEIGHT
+
+VH - 100VH IS EQUAL HEIGHT OF BROWSER SCREEN
+VW - 100VW IS EQUAL WIDTH OF BROWSER SCREEN
+
+html has by default 16px of size = 1rem.
+U can change box size by directly changing font-size in html styling 

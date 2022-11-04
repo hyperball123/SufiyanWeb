@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 10rem;
+            width: 10rem;
+            background-color: lawngreen;
+            margin-bottom: 1rem;
+            font-family: sans-serif;
+            font-size: 2rem;
+        }
+        /* relative ->  position an element relative to its original position */
+        /*                 it also occupies its original position and does not allow another element to enter inside */
+        .one{
+            position: relative;
+            left: 12rem;
+            top:5rem;
+        }
+        /* absolute -> position  an element with repect to page;s top left corner
+            it leaves its oroginal position
+        */
+        .two{
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box one">1</div>
+    <div class="box two">2</div>
+</body>
+</html>

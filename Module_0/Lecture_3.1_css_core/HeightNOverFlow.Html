@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .with_content{
+            margin-bottom: 2rem;
+            border: 1px;
+            padding-top: 1rem;
+        }
+        .with_height{
+            height: 2rem;
+            border: 1px solid red;
+            background-color: lightgreen;
+            margin-bottom: 2rem;
+        }
+        .with_overflow{
+            height: 8rem;
+            border: 2px solid gray;
+            background-color: aqua;
+            /* overflow auto will give vertical scroll */
+            overflow: auto;
+            /* overflow scroll will give right and left + vertical scrolling */
+            /* overflow: scroll; */
+        }
+    </style>
+</head>
+<body>
+    <!-- default height -->
+        <!-- equal to height of content for(P , ul , h1) -->
+
+    <!-- content->height->default -->
+    <div class="with_content">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus sapiente facere, nihil provident, odit expedita error suscipit temporibus, dicta dolorum a. Quae, ducimus. Nihil minima, minus unde nemo ipsum dicta.
+    </div>
+
+    <div class="with_height">Hello</div>
+
+    <!-- height content extra -> overflow -->
+    <div class="with_overflow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nobis iusto quibusdam consectetur aliquam libero veniam error mollitia? Et tenetur, explicabo, repellendus quo dignissimos, accusamus atque libero fugiat doloribus esse quasi eveniet eligendi? In corporis vitae ab totam, dicta dolore ea nisi qui laudantium sint minus neque deserunt enim eius accusantium iusto quos necessitatibus. Nisi ut exercitationem molestiae earum dolorem, velit aliquid iste fuga voluptas ad laborum dolore, pariatur aperiam inventore debitis facere, commodi labore ullam minima dicta consequatur dolores itaque? Corporis iusto saepe fuga vitae placeat natus similique quae maxime dolorem ipsam error, sint esse perspiciatis soluta eum eveniet.
+    </div>
+    
+</body>
+</html>

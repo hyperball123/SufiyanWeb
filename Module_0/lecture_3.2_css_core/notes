@@ -1,0 +1,40 @@
+BOX SIZING
+Visible height = user defined + padding
+---------------------------------------------
+BORDER-BOX 
+if you add 
+box-sizing : border-box;
+this will take height and width as it is wont add extra height of padding
+Bcz of border-box visible size wont change
+*PADDING AND BORDER WILL GET MINUS*
+--------------------------------------------------
+<!-- pseudoclasses -->
+    <!-- link -> link created -->
+    <!-- visited -> after visited -->
+    <!-- hover -> during hovering -->
+    <!-- active -> when u are clicking -->
+---------------------------------------------------
+SEMANTIC HTML TAGS
+In HTML there are some SEMANTIC elements that can be used to define different parts of a web page
+Structure of a web page
+USECASE ---
+This increase the readability and seo of a web page
+<article>
+<footer>
+<header>
+<main>
+<nav>
+<section>
+---------------------------------------------------
+display - flex;
+will bring things in one line if they are in vertical line
+(In this the images came side by side bcz of flexbox)
+
+
+PROPERTIES OF FLEXBOX;
+justify-content:space //manages space horizontally
+align-items:center //will align items vertically
+
+*IN ORDER TO CENTER 1 BOX U NEED TO USE FLEX AND THEN JUSTIFY AND ALIGN ITEMS 
+Flexbox - it is used to perfectly center a div
+------------------------------------------------------

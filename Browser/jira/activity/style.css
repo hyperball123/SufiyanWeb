@@ -1,0 +1,155 @@
+body{
+    margin: 0;  
+    background-color: red; 
+}
+
+* {
+    box-sizing: border-box;
+}
+.header {
+    height: 5rem;
+    background-color: #010101;
+    display: flex ;
+    align-items: center;
+    
+}
+.color_pallate{ 
+    height: 65%;
+    width: 12rem;
+    background-color: rgb(54, 54, 54);
+    border-radius: 4px;
+    margin-right: 5rem;
+    margin-left: 2rem ;
+    display: flex;
+}
+.color_boxes{
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.color{
+    height: 50%;
+    width: 50%; 
+    border-radius: 4px; 
+}
+.pink{
+    background-color:  #e7c1f3;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color:  rgb(180, 250, 76) ;
+}
+.black{
+    background-color: black;
+}
+
+/* options */
+.options{ 
+    height: 65%;
+    width: 7rem;
+    background-color: rgb(54, 54, 54);
+    /* border-radius: 4px; */
+    display: flex;
+   margin-right: 3rem;
+}
+.clicked {
+    background-color: #282829;
+}
+.box {
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    color: white;
+    font-size: 1.5rem;
+}
+/* main area */
+.main{
+    /* AT LEAST THIS MUCH HEIGHT IS NEEDED FOR THE ELEMENT AND IF ELEMENT 
+    INCREASES HEIGHT ALSO INCREASES */
+    min-height:  100vh;
+    /* padding: 2rem; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    background-color: aliceblue;
+}
+.ticket{
+    height: 12rem;
+    width: 15rem;
+    margin-top: 2rem;
+    
+    /* margin-top: 10rem; 
+    margin-left: 10rem; */
+}
+.ticket_header{
+    height: 6%;
+}
+.ticket_content{
+    height: 94%;
+}
+.ticket_id{
+    height: 20%;
+    padding: 0.4rem;
+    font-weight: bold;   
+    font-family: sans-serif;
+    padding-left: 0.7rem;
+}
+textarea{
+    height: 80%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* line height is the space between lines */
+    line-height: 145%;
+    /* add space between letters */
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* modal */
+
+.modal{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    height: 18rem;
+    width: 35rem;
+    position: absolute;
+    background: white ;
+    top: 10rem;
+    /* to place an element in horizontal center using position */
+    left: calc((100vw - 35rem)/2);
+    display: flex;
+}
+.contentArea{
+    width: 70%;
+    height: 100%;
+    font-size: 1.5rem;
+    padding: 3rem;
+}
+.pallet_container{
+    height: 100%;
+    width: 30%;
+    background-color: rgb(59, 55, 55);
+    display: flex;
+    align-items: center;
+    /* default direction - flex is row */
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.pallet_color{
+    height: 15%;
+    width: 60%;
+    border-radius: 4px;
+}

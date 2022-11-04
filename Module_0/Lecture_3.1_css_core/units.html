@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one,.two{
+            /* px is an absolute */
+            border: 1px solid red;
+        }
+        .one{
+            /* view height (vh) and view width(vw) */
+            /* These are known as relative units  */
+            background-color: chartreuse;
+            
+            /* 100 vw :: screen width */
+            width: 50vw;
+            /*  */
+            height: 20vh;
+            margin-bottom:1rem ;
+        }
+        .two{
+            height: 8rem;
+            width: 20rem;
+            background-color: cadetblue;
+        }
+        .child{
+            background-color: aqua;
+            /* percentage relative to our parents */
+            height: 35%;
+            width: 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one">I am Div1</div>
+    <div class="two">
+        i am parent
+        <div class="child">I am child</div>
+    </div>
+    <div class="three">I am Div3</div>
+</body>
+</html>
