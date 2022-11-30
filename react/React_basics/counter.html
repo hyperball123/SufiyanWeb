@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <!-- react ui change algorithm -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <!-- using react library it changes actual web pages -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- babel library converts your jsx into js -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        class Counter extends React.Component {
+            constructor() {
+                // if we are extending something we need to use super()
+                // inheriting parent class React.component by using super()
+                super();
+                // state is an object of React 
+                this.state = {
+                    count: 0,
+                }
+            }
+            handleIncreament = () => {
+                this.setState({
+                    count: this.state.count + 1
+                })
+            }
+            handleDecreament = () => {
+                if(this.state.count>0){
+                    this.setState({
+                        count: this.state.count - 1
+                        
+                    })
+                }
+            }
+            handleReset = () => {
+                this.setState({
+                    count: this.state.count = 0
+                })
+            }
+            render() {
+                return (
+                    // all the ui things should be in one parent as react Fragment
+                    <React.Fragment> 
+                        <button onClick={this.handleIncreament}>+</button>
+                        <h1>{this.state.count}</h1>
+                        <button onClick={this.handleDecreament}>-</button>
+                        <button onClick={this.handleReset}>Reset</button>
+                    </React.Fragment>
+                )
+            }
+        }
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<Counter/>)
+    </script>
+</body>
+
+</html>
