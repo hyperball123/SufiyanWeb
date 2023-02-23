@@ -1,11 +1,15 @@
 import React, { Component } from "react";
-import { movies } from "./getMovies";
-
-export default class Lists extends Component {
+// import { movies } from "./getMovies";
+import axios from "axios";
+export default class List extends Component {
   constructor() {
+    console.log("constructor is called");
     super();
     this.state = {
       hover: "",
+      movies: [],
+      currPage: 1,
+      fav:JSON.parse(localStorage.getItem("movies")).map((movieObj) => movieObj.id), //id of movies
     };
   }
 
@@ -14,26 +18,105 @@ export default class Lists extends Component {
       hover: id,
     });
   };
+
   handleLeave = () => {
     this.setState({
       hover: "",
     });
   };
 
+  async componentDidMount() {
+    console.log("CDM is called ");
+    // let res = await fetch(
+    //   "https://api.themoviedb.org/3/movie/popular?api_key=1749ee86927c862e6ac40360e3eb8c0d&language=en-US&page=2"
+    // );
+    // let data = await res.json();
+    let data = await axios.get(
+      `https://api.themoviedb.org/3/movie/popular?api_key=1749ee86927c862e6ac40360e3eb8c0d&language=en-US&page=1`
+    );
+    console.log(data.data);
+    this.setState({
+      movies: [...data.data.results],
+    });
+  }
+
+  // async componentDidUpdate() {
+  //   console.log("CDU is called ");
+  //   if (this.state.currPage!=) {
+  //     let data = await axios.get(
+  //       `https://api.themoviedb.org/3/movie/popular?api_key=1749ee86927c862e6ac40360e3eb8c0d&language=en-US&page=${this.state.currPage}`
+  //     );
+  //     console.log(data.data);
+  //     this.setState({
+  //       movies: [...data.data.results],
+  //     });
+  //   }
+  // }
+
+  async getUpdatedMovies() {
+    console.log("getUpdatedMovies is called");
+    let data = await axios.get(
+      `https://api.themoviedb.org/3/movie/popular?api_key=1749ee86927c862e6ac40360e3eb8c0d&language=en-US&page=${this.state.currPage}`
+    );
+    console.log(data.data);
+    this.setState({
+      movies: [...data.data.results],
+    });
+  }
+
+  componentWillUnmount() {
+    console.log("CWU is called ");
+  }
+
+  handlePrevPage = () => {
+    if (this.state.currPage > 1) {
+      this.setState(
+        { currPage: this.state.currPage - 1 },
+        this.getUpdatedMovies
+      );
+    }
+  };
+
+  handleNextPage = () => {
+    this.setState({ currPage: this.state.currPage + 1 }, this.getUpdatedMovies);
+  };
+
+  handleFavourites = (movieObj) => {
+    let favouriteMovie = JSON.parse(localStorage.getItem("movies")) || [];
+    if (this.state.fav.includes(movieObj.id)) {
+      //if id is present -> remove
+      favouriteMovie = favouriteMovie.filter(
+        movie => movie.id !== movieObj.id
+      );
+    } else {
+      //add
+      favouriteMovie.push(movieObj);
+    }
+
+    localStorage.setItem("movies", JSON.stringify(favouriteMovie));
+
+    let tempData = favouriteMovie.map(movieObj => movieObj.id);
+    this.setState({
+      fav: [...tempData],
+    });
+  };
+
   render() {
-    let Allmovie = movies.results;
+    console.log("render method called ");
+    console.log("qwerty", JSON.parse(localStorage.getItem("movies")));
+    // let allMovies = movies.results;
     return (
       <>
-        {Allmovie.length === 0 ? (
-          <div class="spinner-border text-warning" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
+        {this.state.movies.length === 0 ? (
+          <div classname="spinner-border text-info" role="status">
+            <span classname="visually-hidden">Loading...</span>
+          </div>  
         ) : (
           <>
             <div>
-              <h3 className="list-title">Trending</h3>
-              <div className="movie-list">
-                {Allmovie.map((movieObj) => {
+              <h3 className="trending display-3">Trending</h3>
+              <div className="movies-list">
+                {this.state.movies.map((movieObj) => {
                   return (
                     <div
                       className="card movie-card"
@@ -49,10 +132,15 @@ export default class Lists extends Component {
                       <h5 className="card-title movie-title">
                         {movieObj.original_title}
                       </h5>
+                      {/* <p classname="card-text movie-text">{movie.overview}</p> */}
                       <div className="button-wrapper">
                         {this.state.hover === movieObj.id && (
-                          <a href="!#" className="btn btn-info movie-button">
-                            Add to Favourites
+                          <a
+                            className="btn btn-info movie-button"
+                            onClick={() => this.handleFavourites(movieObj)}
+                          >
+                            {this.state.fav.includes(movieObj.id)? `Remove from Favourites`
+                              : `Add to Favourite`}
                           </a>
                         )}
                       </div>
@@ -63,30 +151,14 @@ export default class Lists extends Component {
             </div>
             <nav aria-label="Page navigation example" className="pagination">
               <ul className="pagination">
-                <li className="page-item">
-                  <a className="page-link" href="!#">
-                    Previous
-                  </a>
+                <li className="page-item" onClick={this.handlePrevPage}>
+                  <a className="page-link">Previous</a>
                 </li>
                 <li className="page-item">
-                  <a className="page-link" href="!#">
-                    1
-                  </a>
+                  <a className="page-link">{this.state.currPage}</a>
                 </li>
-                <li className="page-item">
-                  <a className="page-link" href="!#">
-                    2
-                  </a>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="!#">
-                    3
-                  </a>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="!#">
-                    Next
-                  </a>
+                <li className="page-item" onClick={this.handleNextPage}>
+                  <a className="page-link">Next</a>
                 </li>
               </ul>
             </nav>
