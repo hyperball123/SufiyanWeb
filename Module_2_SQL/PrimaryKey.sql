@@ -5,7 +5,7 @@ for eg - id,phone no,roll no
 -- CUSTOMER TABLE --  |      --ORDER TABLE --
 NAME                  |     PHNO:
 PHNO.                 |     OID - PRIMARY KEY
-CID:-(ORIMARY KEY)    |     CID - FOREIGN KEY  
+CID:-(PRIMARY KEY)    |     CID - FOREIGN KEY  
 
 
 -- CID INSIDE ORDER TABLE IS A FORRIGN KEY

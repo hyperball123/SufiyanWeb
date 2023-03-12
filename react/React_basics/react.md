@@ -11,5 +11,5 @@ Not Allowed                 ||      Alternatives
 4> if else                  ||      ternary operator?
 5> object render            ||      array rendering
                         
-                        
+
 

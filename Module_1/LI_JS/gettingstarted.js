@@ -6,7 +6,7 @@ console.log("Hello Pepcoders :) ");
 //variable declare;
 // dynamically typed language -> a is one variable.
 // undefined
-        let a;
+let a;
 
 a = 10;
 console.log("value of a",a);//for concatination use comma

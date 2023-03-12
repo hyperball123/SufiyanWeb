@@ -23,7 +23,7 @@ UNITS-->
 
 PX - ABSOLUTE
 
-VH - VIEW HEIGHT, VW - VIEW HEIGHT - 
+VH - VIEW HEIGHT, VW - VIEW WIDTH - 
 These are known as relative units -  
 these are dynamic they change height and width acording to browser size
 WITH RESPECT TO BROWSER WIDTH AND HEIGHT

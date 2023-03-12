@@ -57,7 +57,7 @@ function fn1(){
         }
     //  this rvall also contains the refernce of obj object
         let rval = fn1();
-        console.log("rval",rval);
+        // console.log("rval",rval);
   
 // --------------------------------
 
@@ -71,26 +71,26 @@ function fn1(){
 you can also return a function
 */
 
-// function outer(){
-//     console.log("i am outer function");
-//     return function inner(){
-//         console.log("i am inner fn and i will run when u will call me")
-//     }
-// }
+function outer(){
+    console.log("i am outer function");
+    return function inner(){
+        console.log("i am inner fn and i will run when u will call me")
+    }
+}
 
 // let rfn = outer();
 // console.log("after this line i will call inner");
 // rfn();
 
-// function getFirstName(FirstName){
-//     console.log("firstname",FirstName);
-//     return function getLastname(lastName){
-//         console.log("lastname",lastName);
-//         return function printFullname(){
-//             console.log("my name is ",FirstName,lastName)
-//         }
-//     }
-// }
+function getFirstName(FirstName){
+    console.log("firstname",FirstName);
+    return function getLastname(lastName){
+        console.log("lastname",lastName);
+        return function printFullname(){
+            console.log("my name is",FirstName,lastName)
+        }
+    }
+}
 // let getLastname = getFirstName("sufiyan");
 // let printFullname = getLastname("shaikh")
 // printFullname();

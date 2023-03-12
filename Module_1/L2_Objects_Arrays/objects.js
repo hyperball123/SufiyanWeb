@@ -8,11 +8,16 @@
     
 let cap={
     firstName: "Steve",
-    "last Name":   "Rogers",
+    lastName:   "Rogers",
     friends: ["tony","peter","bruce"],
     address: {
         city : "manhattan",
         state: "NY",
+        buildings:{
+            D1:'students',
+            D2:'Senior citizens',
+            D3:'working professionals'
+        }
     },
     age: 32,
     isAvenger : true,
@@ -23,17 +28,17 @@ let cap={
 // //getting a key value using dot notation
 // console.log(cap.firstName);
 // console.log(cap.lastName);
-// console.log(cap.address.city);
-// console.log(cap.friends[0]);
+// console.log(cap.address.buildings);
+// console.log(cap.friends[1]);
 
-// function getValues(key){
-//     // console.log(cap.key); //using dot. exact obj are being matched ->obj mai jake key variable dhundege
+function getValues(key){
+    console.log(cap.key); //using dot. exact obj are being matched ->obj mai jake key variable dhundege
     
-//     console.log(cap[key]);// using square brackets[] get values from the variable passed in parameters 
-//                             // ->obj ke andar jake name key and age key search karenge
-// }
-// getValues("firstName");
-// getValues("last Name");
+    // console.log(cap[key]);// using square brackets[] get values from the variable passed in parameters 
+                            // ->obj ke andar jake name key and age key search karenge
+}
+getValues("firstName");
+getValues("lastName");
 
 // 1 more way of getting 
 // let varName = "firstName";
@@ -68,8 +73,8 @@ let cap={
 //     isAvenger : true,
 // } 
 
-for(let key in cap){       
-    console.log(key , " : " , cap[key])
+// for(let key in cap){       
+//     console.log(key , " : " , cap[key])
     // just using KEY will bring keys of obj cap
     // and by using cap[key] it will bring details stored in keys
-}
+// }

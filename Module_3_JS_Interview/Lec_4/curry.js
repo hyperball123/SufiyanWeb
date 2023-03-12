@@ -13,5 +13,5 @@ function fn(){
     }
     }
 }
-
-fn()();
+console.log("hello")
+fn();

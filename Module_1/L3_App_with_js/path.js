@@ -30,7 +30,7 @@ let path=require("path");
 // let actualFile = "Rang de basanti";
 // // path join - will create a string instead of writing a path 
 // // path.join joins path 
-// let address = path.join(folderName , nextFolderName , childeFolder ,actualFile);
+// let address = path.join(folderName , nextFolderName , childFolder ,actualFile);
 // console.log("***************************************************")
 // console.log(address);
 

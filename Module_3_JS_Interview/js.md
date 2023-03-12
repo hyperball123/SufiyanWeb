@@ -23,7 +23,7 @@ any code that is written outside of function --> it is in global area
 
 //another Execution context is always created when a function is invoked
 
-// when a function doesen't have a variable declared
+//  when a function doesen't have a variable declared
     // --it will look outside the function defination
 
         

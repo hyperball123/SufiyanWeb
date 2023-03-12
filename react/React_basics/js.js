@@ -8,7 +8,7 @@
 
 // const [ three,...rest] = numbers;
 
-// // console.log("<p>" + two + "</p>");
+// console.log("<p>" + two + "</p>");
 // console.log("<p>" + three + "</p>");
 // console.log("<p>" + rest + "</p>");
 

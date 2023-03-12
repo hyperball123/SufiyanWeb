@@ -6,7 +6,7 @@
 ## node js is famous for different reasons but few points are 
 ## modules - node js has its own modules inbuilt. such as...    
     -- fs.files
-    -- os - for cimmunication with operating system
+    -- os - for communication with operating system
     -- path - for url 
     and there are many more these are some famous ones/
 
@@ -35,7 +35,7 @@ let fs = require("fs");
 
 ## path 
   1.__dirname;
-  2.__filename
+  2.__filename;
   3.process.cwd();
 
   4.path.join();

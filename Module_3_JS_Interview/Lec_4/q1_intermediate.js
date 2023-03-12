@@ -37,7 +37,7 @@ let arrFn = printArrFN();
 // console.log("arrFn1",arrFn[1]);
 // console.log("arrFn2",arrFn[2]);
 
-arrfn[0]();
-arrfn[1]();
-arrfn[2]();
+arrFn[0]();
+arrFn[1]();
+arrFn[2]();
 

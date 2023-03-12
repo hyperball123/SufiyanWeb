@@ -30,7 +30,6 @@ function fcb1(err,data){
 //         console.log("data " + data);
 //     }
 // }
-
 for(let i = 0 ; i<=10 ; i++){
     console.log("i",i);
 }
